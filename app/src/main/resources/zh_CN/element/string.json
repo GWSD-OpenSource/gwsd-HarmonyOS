@@ -1,0 +1,224 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "模块描述"
+    },
+    {
+      "name": "AppAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "AppAbility_label",
+      "value": "集群通信"
+    },
+    {
+      "name": "hint_account",
+      "value": "账号"
+    },
+    {
+      "name": "hint_password",
+      "value": "密码"
+    },
+    {
+      "name": "title_welcome",
+      "value": "欢迎使用集群通信系统"
+    },
+    {
+      "name": "btn_login",
+      "value": "登陆"
+    },
+    {
+      "name": "main_tab_chat",
+      "value": "聊天"
+    },
+    {
+      "name": "main_tab_grp",
+      "value": "群组"
+    },
+    {
+      "name": "main_tab_my",
+      "value": "我"
+    },
+    {
+      "name": "title_group_detail",
+      "value": "群组详情"
+    },
+    {
+      "name": "send_msg",
+      "value": "发消息"
+    },
+    {
+      "name": "del_msg",
+      "value": "清空消息"
+    },
+    {
+      "name": "half_duplex",
+      "value": "对讲"
+    },
+    {
+      "name": "group_announcement",
+      "value": "群公告"
+    },
+    {
+      "name": "title_group_member",
+      "value": "群组成员"
+    },
+    {
+      "name": "btn_press_speak",
+      "value": "按下讲话"
+    },
+    {
+      "name": "btn_send",
+      "value": "发送"
+    },
+    {
+      "name": "photo",
+      "value": "图片"
+    },
+    {
+      "name": "Video",
+      "value": "视频"
+    },
+    {
+      "name": "Voice",
+      "value": "语音"
+    },
+    {
+      "name": "pttcall",
+      "value": "对讲呼叫"
+    },
+    {
+      "name": "voicecall",
+      "value": "语音呼叫"
+    },
+    {
+      "name": "videocall",
+      "value": "视频呼叫"
+    },
+    {
+      "name": "location",
+      "value": "位置"
+    },
+    {
+      "name": "not_connected",
+      "value": "未接通"
+    },
+    {
+      "name": "talk_time",
+      "value": "通话时长:%1$s"
+    },
+    {
+      "name": "hint_login_succeed",
+      "value": "登陆成功"
+    },
+    {
+      "name": "hint_login_failure",
+      "value": "登陆失败"
+    },
+    {
+      "name": "hint_network_err",
+      "value": "网络错误"
+    },
+    {
+      "name": "hint_loging_otherterminals",
+      "value": "其他终端登陆"
+    },
+    {
+      "name": "hint_exploit_ing",
+      "value": "开发中..."
+    },
+    {
+      "name": "hint_notPermission",
+      "value": "无权限"
+    },
+    {
+      "name": "confirm",
+      "value": "确定"
+    },
+    {
+      "name": "cancel",
+      "value": "取消"
+    },
+    {
+      "name": "hint_uploading",
+      "value": "正在上传"
+    },
+    {
+      "name": "chat_type_video",
+      "value": "【视频通话】"
+    },
+    {
+      "name": "chat_type_voice",
+      "value": "【语音通话】"
+    },
+    {
+      "name": "chat_imtype_video",
+      "value": "【视频】"
+    },
+    {
+      "name": "chat_imtype_img",
+      "value": "【图片】"
+    },
+    {
+      "name": "chat_imtype_voice",
+      "value": "【语音】"
+    },
+    {
+      "name": "chat_imtype_pttvoice",
+      "value": "【PTT语音】"
+    },
+    {
+      "name": "chat_imtype_file",
+      "value": "【文件】"
+    },
+    {
+      "name": "chat_imtype_location",
+      "value": "【位置】"
+    },
+    {
+      "name": "btn_loosen_end",
+      "value": "松开结束"
+    },
+    {
+      "name": "hint_poc_current_group",
+      "value": "当前群组：%1$s"
+    },
+    {
+      "name": "hint_poc_current_member",
+      "value": "当前用户：%1$s"
+    },
+    {
+      "name": "title_group_call",
+      "value": "群组呼叫"
+    },
+    {
+      "name": "title_temp_call",
+      "value": "临时呼叫"
+    },
+    {
+      "name": "successed",
+      "value": "成功"
+    },
+    {
+      "name": "failure",
+      "value": "失败"
+    },
+    {
+      "name": "hint_Idle_waiting",
+      "value": "空闲等待"
+    },
+    {
+      "name": "local_equipment_speak",
+      "value": "本机正在讲话"
+    },
+    {
+      "name": "permission_microphone",
+      "value": "允许应用使用麦克风录音"
+    },
+    {
+      "name": "invite_to_voice_call",
+      "value": "邀请你语音通话"
+    }
+  ]
+}

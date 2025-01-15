@@ -1,0 +1,14 @@
+{
+  "name": "app",
+  "version": "1.0.1",
+  "description": "gwsd open ptt",
+  "main": "",
+  "author": "Jack He",
+  "license": "",
+  "dependencies": {
+    "gwsdptt_sdk": "file:./libs/gwsdptt.har",
+    "dayjs": "^1.11.13"
+  },
+  "devDependencies": {},
+  "dynamicDependencies": {}
+}
