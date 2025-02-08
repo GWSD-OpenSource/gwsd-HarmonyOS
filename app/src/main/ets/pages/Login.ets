@@ -5,6 +5,7 @@ import { GWLoginResultBean, GWType } from 'gwsdptt_sdk'
 import { JSON } from '@kit.ArkTS';
 import { common } from '@kit.AbilityKit';
 import AppAbility from '../appability/AppAbility';
+import { getDeviceIccid, getDeviceImei } from '../config/DeviceConfig';
 
 @Component
 struct InputFloatHint{
@@ -122,7 +123,9 @@ struct Login {
   }
 
   login() : void {
-    GWSDKManager.getInstance().login(this.account, this.password, '12345', '54321');
+    let imei = getDeviceImei();
+    let iccid = getDeviceIccid();
+    GWSDKManager.getInstance().login(this.account, this.password, imei, iccid);
   }
 
   build() {

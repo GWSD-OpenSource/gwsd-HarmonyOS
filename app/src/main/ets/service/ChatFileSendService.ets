@@ -13,6 +13,7 @@ import { MsgDB } from "../db/MsgDB";
 import { MsgContentBean } from "../db/MsgContentBean";
 import { MsgConversationBean } from "../db/MsgConversationBean";
 import { copyFile } from '../utils/Utils';
+import { FILE_SERVER_ADDRESS } from "../config/ServerAddressConfig";
 
 @Concurrent
 async function fileUpload(fileUploadParam:ChatFileUploadParam): Promise<ChatFileUploadParam|null> {
@@ -39,14 +40,14 @@ async function fileUpload(fileUploadParam:ChatFileUploadParam): Promise<ChatFile
     filePath: uri,
   };
   if (thumburi !== '') {
-    multdata[0] = {
+    multdata[1] = {
       name:'file2',
       contentType: 'image/jpg',
       filePath: thumburi,
     };
   }
   const httpRequest = http.createHttp();
-  await httpRequest.request('http://120.46.155.150:5001/app/chat/msg/upload2',{
+  await httpRequest.request(FILE_SERVER_ADDRESS,{
     method:http.RequestMethod.POST,
     header:{
       'Content-Type': 'multipart/form-data',
@@ -73,8 +74,10 @@ async function fileUpload(fileUploadParam:ChatFileUploadParam): Promise<ChatFile
       } else {
       }
     } catch (e) {
+      console.log('err1')
     }
   }).catch((err: BusinessError) => {
+    console.log('err')
   });
   return upload;
 }
@@ -94,10 +97,18 @@ export class ChatFileSendService {
   private constructor() {
   }
 
-  public async sendMediaFile(chatFileMsgParam:ChatFileMsgParam, context: common.UIAbilityContext) {
+  public async sendMediaFile(chatFileMsgParam:ChatFileMsgParam, copy:boolean, context: common.UIAbilityContext) {
     this.log('sendMediaFile1');
-    let fileUploadParam:ChatFileUploadParam = new ChatFileUploadParam(copyFile(chatFileMsgParam.filepath, context),
-      chatFileMsgParam.filetype, copyFile(chatFileMsgParam.filepathThumb, context));
+    let fileUploadParam: ChatFileUploadParam|undefined = undefined;
+    if (copy) {
+      let str = copyFile(chatFileMsgParam.filepath, context);
+      let str1 = copyFile(chatFileMsgParam.filepathThumb, context);
+      fileUploadParam = new ChatFileUploadParam(str, chatFileMsgParam.filetype, str1);
+    }
+    else {
+      fileUploadParam = new ChatFileUploadParam(chatFileMsgParam.filepath,
+        chatFileMsgParam.filetype, chatFileMsgParam.filepathThumb);
+    }
     let fileUploadTask: taskpool.Task = new taskpool.Task(fileUpload, fileUploadParam);
     this.log('sendMediaFile2');
     await taskpool.execute(fileUploadTask).then((res: object) => {
